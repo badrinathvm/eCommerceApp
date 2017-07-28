@@ -376,16 +376,16 @@
             </objects>
             <point key="canvasLocation" x="162" y="927"/>
         </scene>
-        <!--Root View Controller-->
+        <!--FeedTableViewController-->
         <scene sceneID="QZd-kt-ifS">
             <objects>
-                <tableViewController id="Ylp-Iq-rkY" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FeedTableViewController" id="Ylp-Iq-rkY" userLabel="FeedTableViewController" customClass="FeedTableViewController" customModule="eCommerceApp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="428" sectionHeaderHeight="28" sectionFooterHeight="28" id="5TL-5B-mva">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="444" id="I60-pv-y66">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedProductCell" rowHeight="444" id="I60-pv-y66" customClass="FeedProductCell" customModule="eCommerceApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="444"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I60-pv-y66" id="K3B-pH-QmR">
@@ -399,13 +399,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIKE FREE RN FLKNIT 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtd-Pu-Lda">
-                                            <rect key="frame" x="12" y="387" width="165" height="24.5"/>
+                                            <rect key="frame" x="12" y="386" width="165" height="31"/>
                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="$130" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWH-4F-sKS">
-                                            <rect key="frame" x="12" y="413.5" width="31" height="18"/>
+                                            <rect key="frame" x="12" y="418.5" width="31" height="18"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -413,15 +413,20 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="K5U-zr-vF6" firstAttribute="leading" secondItem="K3B-pH-QmR" secondAttribute="leading" id="0hG-cs-OCj"/>
-                                        <constraint firstAttribute="bottom" secondItem="SWH-4F-sKS" secondAttribute="bottom" constant="12" id="7D1-Gg-xt2"/>
-                                        <constraint firstItem="Mtd-Pu-Lda" firstAttribute="top" secondItem="K5U-zr-vF6" secondAttribute="bottom" constant="12" id="Rvs-Bp-6T1"/>
+                                        <constraint firstAttribute="bottom" secondItem="SWH-4F-sKS" secondAttribute="bottom" constant="7" id="7D1-Gg-xt2"/>
+                                        <constraint firstItem="Mtd-Pu-Lda" firstAttribute="top" secondItem="K5U-zr-vF6" secondAttribute="bottom" constant="11" id="Rvs-Bp-6T1"/>
                                         <constraint firstItem="Mtd-Pu-Lda" firstAttribute="leading" secondItem="K3B-pH-QmR" secondAttribute="leading" constant="12" id="Tn5-oG-Ml1"/>
                                         <constraint firstItem="K5U-zr-vF6" firstAttribute="top" secondItem="K3B-pH-QmR" secondAttribute="top" id="dBu-C6-yzU"/>
-                                        <constraint firstItem="SWH-4F-sKS" firstAttribute="top" secondItem="Mtd-Pu-Lda" secondAttribute="bottom" constant="2" id="gOA-0W-hUk"/>
+                                        <constraint firstItem="SWH-4F-sKS" firstAttribute="top" secondItem="Mtd-Pu-Lda" secondAttribute="bottom" constant="1.5" id="gOA-0W-hUk"/>
                                         <constraint firstAttribute="trailing" secondItem="K5U-zr-vF6" secondAttribute="trailing" id="hOb-ua-Gnm"/>
                                         <constraint firstItem="SWH-4F-sKS" firstAttribute="leading" secondItem="K3B-pH-QmR" secondAttribute="leading" constant="12" id="ioC-qH-NBa"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="productImageView" destination="K5U-zr-vF6" id="rhb-nr-gDx"/>
+                                    <outlet property="productNameLabel" destination="Mtd-Pu-Lda" id="wQH-6M-7QC"/>
+                                    <outlet property="productPriceLabel" destination="SWH-4F-sKS" id="KRN-te-4Ym"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -429,7 +434,7 @@
                             <outlet property="delegate" destination="Ylp-Iq-rkY" id="xo7-Ke-ipW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="CQ8-E9-qGW"/>
+                    <navigationItem key="navigationItem" title="FEED" id="CQ8-E9-qGW"/>
                     <connections>
                         <segue destination="BGM-u5-N8J" kind="show" id="nZ6-A0-SoB"/>
                     </connections>

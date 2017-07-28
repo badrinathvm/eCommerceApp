@@ -12,6 +12,9 @@
 		0509276A1F2B9F5D00403276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050927681F2B9F5D00403276 /* Main.storyboard */; };
 		0509276C1F2B9F5D00403276 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0509276B1F2B9F5D00403276 /* Assets.xcassets */; };
 		0509276F1F2B9F5D00403276 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0509276D1F2B9F5D00403276 /* LaunchScreen.storyboard */; };
+		050927771F2BF28300403276 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050927761F2BF28300403276 /* Product.swift */; };
+		050927791F2BFBCD00403276 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050927781F2BFBCD00403276 /* FeedTableViewController.swift */; };
+		0509277B1F2BFD7300403276 /* FeedProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0509277A1F2BFD7300403276 /* FeedProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		0509276B1F2B9F5D00403276 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0509276E1F2B9F5D00403276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		050927701F2B9F5D00403276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		050927761F2BF28300403276 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = ../Product.swift; sourceTree = "<group>"; };
+		050927781F2BFBCD00403276 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		0509277A1F2BFD7300403276 /* FeedProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +60,15 @@
 		050927631F2B9F5D00403276 /* eCommerceApp */ = {
 			isa = PBXGroup;
 			children = (
+				050927761F2BF28300403276 /* Product.swift */,
 				050927641F2B9F5D00403276 /* AppDelegate.swift */,
 				050927661F2B9F5D00403276 /* ViewController.swift */,
 				050927681F2B9F5D00403276 /* Main.storyboard */,
 				0509276B1F2B9F5D00403276 /* Assets.xcassets */,
 				0509276D1F2B9F5D00403276 /* LaunchScreen.storyboard */,
 				050927701F2B9F5D00403276 /* Info.plist */,
+				050927781F2BFBCD00403276 /* FeedTableViewController.swift */,
+				0509277A1F2BFD7300403276 /* FeedProductCell.swift */,
 			);
 			path = eCommerceApp;
 			sourceTree = "<group>";
@@ -139,6 +148,9 @@
 			files = (
 				050927671F2B9F5D00403276 /* ViewController.swift in Sources */,
 				050927651F2B9F5D00403276 /* AppDelegate.swift in Sources */,
+				050927771F2BF28300403276 /* Product.swift in Sources */,
+				0509277B1F2BFD7300403276 /* FeedProductCell.swift in Sources */,
+				050927791F2BFBCD00403276 /* FeedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

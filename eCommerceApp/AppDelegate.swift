@@ -16,7 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.configureAppearence()
+        
         return true
+    }
+    
+    func configureAppearence(){
+        UITabBar.appearance().tintColor = UIColor.black
+        UITabBar.appearance().isTranslucent = false
+        
+        UINavigationBar.appearance().tintColor = UIColor.black
+        UINavigationBar.appearance().isTranslucent = false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
