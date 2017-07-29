@@ -29,6 +29,7 @@ class Product{
         self.name = name
         self.images = images
         self.price = price
+        self.description = description
         self.detail = detail
         self.relatedProductUIDs = relatedProductUIDs
     }

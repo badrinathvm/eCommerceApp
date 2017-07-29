@@ -14,6 +14,7 @@ class FeedTableViewController: UITableViewController {
     
     struct Storyboard{
         static let feedProductCell = "FeedProductCell"
+        static let showShoeSegue = "showShoeSegue"
     }
 
     override func viewDidLoad() {
@@ -22,6 +23,9 @@ class FeedTableViewController: UITableViewController {
         navigationItem.title = "FEED"
         
         fetchProducts()
+        
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func fetchProducts(){
@@ -52,12 +56,26 @@ class FeedTableViewController: UITableViewController {
         
         if let product = products{
             cell.product = product[indexPath.row]
+            cell.selectionStyle = .none
         }
-
-        // Configure the cell...
-
+        
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: FeedTableViewController.Storyboard.showShoeSegue, sender: indexPath)
+    }
+    
 
-}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == FeedTableViewController.Storyboard.showShoeSegue {
+            if let shoeDetailTVC = segue.destination as? ProductDetailTVC {
+                let selectedShoe = self.products?[(sender as! IndexPath).row]
+                shoeDetailTVC.product = selectedShoe
+            }
+        }
+    }
+    
+ }
+
