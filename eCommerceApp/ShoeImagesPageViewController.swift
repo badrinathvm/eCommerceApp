@@ -31,20 +31,18 @@ class ShoeImagesPageViewController: UIPageViewController {
         
         var controllers = [UIViewController]()
         
+        //Add each images to view controller objects
         if let images = self.images{
             for image in images{
                 let shoeImageVC = storyboard.instantiateViewController(withIdentifier: ShoeImagesPageViewController.Storyboard.shoeImageViewController)
-                
                 controllers.append(shoeImageVC)
             }
         }
         
-        //Let delgate know how many pages are there
-        
+        //Let delegate know how many pages are there
         self.pageViewControllerDelegate?.setupPageController(numberOfPages: controllers.count)
         
         return controllers
-        
     }()
     
     override func viewDidLoad() {
@@ -71,16 +69,18 @@ class ShoeImagesPageViewController: UIPageViewController {
             
             let currentIndex = controllers.index(of: currentVC)!
             
+            //Determine the direction
             if (currentIndex > index) {
                 direction = .reverse
             }
             
         }
         
+        //Make chnages to display the image
         self.configureDisplaying(viewController:controller)
         
+        //set the correct view controller
         setViewControllers([controller], direction: direction, animated: true, completion: nil)
-        
     }
     
     
@@ -97,6 +97,7 @@ class ShoeImagesPageViewController: UIPageViewController {
                     
                     shoeImageVC.image = self.images?[index]
                     
+                    //which page index it is
                     self.pageViewControllerDelegate?.turnPageController(to: index)
                 }
             }

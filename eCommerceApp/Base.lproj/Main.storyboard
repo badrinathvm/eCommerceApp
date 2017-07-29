@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -96,13 +95,13 @@
         <!--SHOPPING BAG-->
         <scene sceneID="csC-dg-OGm">
             <objects>
-                <tableViewController id="dgm-CB-i4f" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ShoppingBagTVC" id="dgm-CB-i4f" customClass="ShoppingBagTVC" customModule="eCommerceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" id="WVc-6E-iwr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="JBk-b1-jXC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NumberOfItemsCell" rowHeight="70" id="JBk-b1-jXC" customClass="NumberOfItemsCell" customModule="eCommerceApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JBk-b1-jXC" id="cXo-Ql-Oy2">
@@ -123,8 +122,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="numberOfItemsLabel" destination="JWp-qN-6ms" id="Fau-Ex-INi"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="145" id="ESi-AN-9uz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartItemCell" rowHeight="145" id="ESi-AN-9uz" customClass="CartItemCell" customModule="eCommerceApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="98" width="375" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ESi-AN-9uz" id="Fu8-bi-P4N">
@@ -132,28 +134,28 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s1" translatesAutoresizingMaskIntoConstraints="NO" id="NpU-cL-tVU">
-                                            <rect key="frame" x="24" y="24" width="96" height="96"/>
+                                            <rect key="frame" x="12" y="24" width="96" height="96"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="96" id="07S-pv-jb4"/>
-                                                <constraint firstAttribute="width" constant="96" id="3lc-8X-QK6"/>
+                                                <constraint firstAttribute="width" constant="96" id="CKR-iP-abd"/>
+                                                <constraint firstAttribute="height" constant="96" id="dj5-xq-Xvf"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5g7-rj-qx0">
-                                            <rect key="frame" x="132" y="24" width="219" height="96.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5g7-rj-qx0">
+                                            <rect key="frame" x="110" y="24" width="253" height="96.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIKE FREE RN FLYNKIT 2017 MEN'S RUNNING SHOES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nld-uw-JWu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="193" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIKE FREE RN FLYNKIT 2017 MEN'S RUNNING SHOES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nld-uw-JWu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="249" height="41"/>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$120.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ked-P1-krE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$120.0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ked-P1-krE">
                                                     <rect key="frame" x="0.0" y="46.5" width="31" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHs-Ae-dKo">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHs-Ae-dKo">
                                                     <rect key="frame" x="0.0" y="81" width="41" height="15.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -163,17 +165,24 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="5g7-rj-qx0" secondAttribute="trailing" constant="24" id="4Ag-aP-xXH"/>
-                                        <constraint firstItem="NpU-cL-tVU" firstAttribute="leading" secondItem="Fu8-bi-P4N" secondAttribute="leadingMargin" constant="16" id="8Jc-Ha-a5h"/>
-                                        <constraint firstItem="NpU-cL-tVU" firstAttribute="top" secondItem="Fu8-bi-P4N" secondAttribute="topMargin" constant="16" id="Mpo-3l-AqS"/>
-                                        <constraint firstItem="5g7-rj-qx0" firstAttribute="leading" secondItem="NpU-cL-tVU" secondAttribute="trailing" constant="12" id="Ni5-Jv-2oz"/>
-                                        <constraint firstItem="5g7-rj-qx0" firstAttribute="top" secondItem="Fu8-bi-P4N" secondAttribute="top" constant="24" id="Yhp-pp-kAj"/>
-                                        <constraint firstAttribute="bottom" secondItem="5g7-rj-qx0" secondAttribute="bottom" constant="24" id="grL-2v-LkI"/>
+                                        <constraint firstItem="5g7-rj-qx0" firstAttribute="leading" secondItem="NpU-cL-tVU" secondAttribute="trailing" constant="2" id="G1m-JT-UqP"/>
+                                        <constraint firstItem="NpU-cL-tVU" firstAttribute="top" secondItem="Fu8-bi-P4N" secondAttribute="top" constant="24" id="RKQ-s2-Zrg"/>
+                                        <constraint firstAttribute="bottom" secondItem="5g7-rj-qx0" secondAttribute="bottom" constant="24" id="RmJ-gD-RWT"/>
+                                        <constraint firstAttribute="trailing" secondItem="5g7-rj-qx0" secondAttribute="trailing" constant="12" id="RnN-Fb-DU8"/>
+                                        <constraint firstAttribute="bottom" secondItem="NpU-cL-tVU" secondAttribute="bottom" constant="24" id="V28-jj-OAk"/>
+                                        <constraint firstItem="NpU-cL-tVU" firstAttribute="leading" secondItem="Fu8-bi-P4N" secondAttribute="leading" constant="12" id="o3g-Fh-EV0"/>
+                                        <constraint firstItem="5g7-rj-qx0" firstAttribute="top" secondItem="Fu8-bi-P4N" secondAttribute="top" constant="24" id="u5o-RG-dwo"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="priceLabel" destination="Ked-P1-krE" id="HZD-vX-xXG"/>
+                                    <outlet property="productImageView" destination="NpU-cL-tVU" id="HwZ-U3-8Gg"/>
+                                    <outlet property="productNameLabel" destination="nld-uw-JWu" id="gjX-vr-e5M"/>
+                                    <outlet property="removeLabel" destination="EHs-Ae-dKo" id="ocb-ae-kgc"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="wMI-Ug-n5E">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaxCell" rowHeight="124" id="wMI-Ug-n5E" customClass="TaxCell" customModule="eCommerceApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="243" width="375" height="124"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wMI-Ug-n5E" id="uu9-Xd-yDy">
@@ -254,7 +263,7 @@
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="Yl5-fZ-ZlB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TotalCell" rowHeight="73" id="Yl5-fZ-ZlB" customClass="TotalCell" customModule="eCommerceApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="367" width="375" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yl5-fZ-ZlB" id="L3p-sf-aVC">
@@ -288,7 +297,7 @@
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="5uE-b9-GLO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckoutButtonCell" rowHeight="65" id="5uE-b9-GLO" customClass="CheckoutButtonCell" customModule="eCommerceApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="440" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5uE-b9-GLO" id="ayH-3Y-Fem">
@@ -315,15 +324,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="36" id="EZY-mQ-z3E">
-                                <rect key="frame" x="0.0" y="505" width="375" height="36"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EZY-mQ-z3E" id="D6L-Pu-fhH">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="35.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
                                 <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
