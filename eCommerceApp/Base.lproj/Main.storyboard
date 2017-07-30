@@ -683,13 +683,13 @@
         <!--CHECKOUT-->
         <scene sceneID="jt4-Ag-Y9W">
             <objects>
-                <tableViewController id="L5p-Yl-UwE" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CheckoutTVC" id="L5p-Yl-UwE" customClass="CheckoutTVC" customModule="eCommerceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" id="NY9-N8-DSQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="7No-3t-951">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NumberOfItemsCell" rowHeight="70" id="7No-3t-951" customClass="NumberOfItemsCell" customModule="eCommerceApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7No-3t-951" id="1Uf-qw-YQQ">
@@ -710,8 +710,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="numberOfItemsLabel" destination="ilD-ad-ixk" id="Pmj-rV-w1A"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="407" id="fGk-4E-gfn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserDetailsCell" rowHeight="407" id="fGk-4E-gfn" customClass="UserDetailsCell" customModule="eCommerceApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="98" width="375" height="407"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fGk-4E-gfn" id="gDx-8Y-VVo">
@@ -834,8 +837,14 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="cardNumberTextField" destination="kig-gQ-CU7" id="HVJ-pd-Wnx"/>
+                                    <outlet property="cvvTextField" destination="bDI-nx-Okt" id="kom-hE-rtJ"/>
+                                    <outlet property="emailAddresTextField" destination="g6A-K7-Nb4" id="x9M-KO-S4H"/>
+                                    <outlet property="expirationDateTextField" destination="WHg-e8-HW3" id="OlS-ZL-1JS"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="vtA-zJ-pFJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaxCell" rowHeight="124" id="vtA-zJ-pFJ" customClass="TaxCell" customModule="eCommerceApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="505" width="375" height="124"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vtA-zJ-pFJ" id="pEj-rO-ArT">
@@ -916,7 +925,7 @@
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="5Hd-TO-66L">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TotalCell" rowHeight="73" id="5Hd-TO-66L">
                                 <rect key="frame" x="0.0" y="629" width="375" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Hd-TO-66L" id="mko-eC-3fb">
@@ -950,7 +959,7 @@
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="aZ7-s7-hm6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubmitOrderCell" rowHeight="65" id="aZ7-s7-hm6">
                                 <rect key="frame" x="0.0" y="702" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aZ7-s7-hm6" id="rrd-AV-0zu">
@@ -974,15 +983,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="36" id="HYT-6Z-lfd">
-                                <rect key="frame" x="0.0" y="767" width="375" height="36"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HYT-6Z-lfd" id="Uz2-6J-ra8">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="35.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
                                 <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>

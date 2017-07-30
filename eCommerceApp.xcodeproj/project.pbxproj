@@ -27,6 +27,9 @@
 		058ACF041F2D2E0C00AA85CE /* TotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ACF031F2D2E0C00AA85CE /* TotalCell.swift */; };
 		058ACF061F2D2E2D00AA85CE /* CheckoutButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ACF051F2D2E2D00AA85CE /* CheckoutButtonCell.swift */; };
 		058ACF081F2D368C00AA85CE /* TaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ACF071F2D368C00AA85CE /* TaxCell.swift */; };
+		058ACF0D1F2E88F200AA85CE /* CheckoutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ACF0C1F2E88F200AA85CE /* CheckoutTVC.swift */; };
+		058ACF111F2E89BD00AA85CE /* UserDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ACF101F2E89BD00AA85CE /* UserDetailsCell.swift */; };
+		058ACF131F2E8C9F00AA85CE /* SubmitOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ACF121F2E8C9F00AA85CE /* SubmitOrderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		058ACF031F2D2E0C00AA85CE /* TotalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalCell.swift; sourceTree = "<group>"; };
 		058ACF051F2D2E2D00AA85CE /* CheckoutButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutButtonCell.swift; sourceTree = "<group>"; };
 		058ACF071F2D368C00AA85CE /* TaxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxCell.swift; sourceTree = "<group>"; };
+		058ACF0C1F2E88F200AA85CE /* CheckoutTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutTVC.swift; sourceTree = "<group>"; };
+		058ACF101F2E89BD00AA85CE /* UserDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsCell.swift; sourceTree = "<group>"; };
+		058ACF121F2E8C9F00AA85CE /* SubmitOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitOrderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 				050927811F2C076700403276 /* Model */,
 				050927801F2C073700403276 /* FEED */,
 				058ACEFA1F2D2AD200AA85CE /* ShoppingBag */,
+				058ACF0B1F2E88C700AA85CE /* Checkout */,
 			);
 			path = eCommerceApp;
 			sourceTree = "<group>";
@@ -181,6 +188,32 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		058ACF0B1F2E88C700AA85CE /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				058ACF0F1F2E899700AA85CE /* Views */,
+				058ACF0E1F2E898A00AA85CE /* Controllers */,
+			);
+			name = Checkout;
+			sourceTree = "<group>";
+		};
+		058ACF0E1F2E898A00AA85CE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				058ACF0C1F2E88F200AA85CE /* CheckoutTVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		058ACF0F1F2E899700AA85CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				058ACF101F2E89BD00AA85CE /* UserDetailsCell.swift */,
+				058ACF121F2E8C9F00AA85CE /* SubmitOrderCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,6 +294,7 @@
 				058ACF021F2D2D5800AA85CE /* CartItemCell.swift in Sources */,
 				050927901F2C8EFE00403276 /* ShoeImagesHeaderView.swift in Sources */,
 				058ACF061F2D2E2D00AA85CE /* CheckoutButtonCell.swift in Sources */,
+				058ACF111F2E89BD00AA85CE /* UserDetailsCell.swift in Sources */,
 				0509277B1F2BFD7300403276 /* FeedProductCell.swift in Sources */,
 				058ACEFC1F2D2AEE00AA85CE /* ShoppingBagTVC.swift in Sources */,
 				0509277F1F2C069100403276 /* BuyButtonCell.swift in Sources */,
@@ -269,8 +303,10 @@
 				058ACEF81F2D2A7800AA85CE /* ShoppingBagTVCTableViewController.swift in Sources */,
 				058ACF081F2D368C00AA85CE /* TaxCell.swift in Sources */,
 				058ACEFE1F2D2CA600AA85CE /* NumberOfItemsCell.swift in Sources */,
+				058ACF131F2E8C9F00AA85CE /* SubmitOrderCell.swift in Sources */,
 				058ACF041F2D2E0C00AA85CE /* TotalCell.swift in Sources */,
 				050927791F2BFBCD00403276 /* FeedTableViewController.swift in Sources */,
+				058ACF0D1F2E88F200AA85CE /* CheckoutTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

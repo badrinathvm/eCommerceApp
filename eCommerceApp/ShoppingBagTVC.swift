@@ -77,7 +77,6 @@ extension ShoppingBagTVC  {
         }else if (indexPath.row == product.count + 1){
             // tax cell
             
-            
             let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingBagTVC.Storyboard.taxCell, for: indexPath) as! TaxCell
             
     
@@ -85,12 +84,10 @@ extension ShoppingBagTVC  {
             
         } else if (indexPath.row == product.count + 2){
             //total cell
-            
-            
+        
             let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingBagTVC.Storyboard.totalCell, for: indexPath) as! TotalCell
             
             return cell
-            
             
         } else if ( indexPath.row == product.count + 3){
             //checkout cell
