@@ -564,7 +564,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="361" id="dSN-VY-hHv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SuggestionTableViewCell" rowHeight="361" id="dSN-VY-hHv" customClass="SuggestionTableViewCell" customModule="eCommerceApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="694" width="375" height="361"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dSN-VY-hHv" id="kyT-W9-Owh">
@@ -577,12 +577,53 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZMU-v3-HlS">
+                                            <rect key="frame" x="0.0" y="69" width="375" height="291.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="2.5" id="7zO-St-i7B">
+                                                <size key="itemSize" width="185" height="185"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SuggestionCollectionViewCell" id="ihB-YK-iYm" customClass="SuggestionCollectionViewCell" customModule="eCommerceApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s1" translatesAutoresizingMaskIntoConstraints="NO" id="xaR-xc-qKT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="xaR-xc-qKT" secondAttribute="bottom" id="Kyp-Ji-ny5"/>
+                                                        <constraint firstItem="xaR-xc-qKT" firstAttribute="leading" secondItem="ihB-YK-iYm" secondAttribute="leading" id="Sh5-o3-Jue"/>
+                                                        <constraint firstItem="xaR-xc-qKT" firstAttribute="top" secondItem="ihB-YK-iYm" secondAttribute="top" id="c7F-DA-L2X"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xaR-xc-qKT" secondAttribute="trailing" id="fJV-gw-lu5"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="imageView" destination="xaR-xc-qKT" id="HpR-Jl-Sdp"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ZMU-v3-HlS" secondAttribute="bottom" id="22h-mP-TjT"/>
+                                        <constraint firstItem="ZMU-v3-HlS" firstAttribute="leading" secondItem="kyT-W9-Owh" secondAttribute="leading" id="JGF-Kr-vZv"/>
                                         <constraint firstItem="G8y-er-uec" firstAttribute="top" secondItem="kyT-W9-Owh" secondAttribute="top" constant="24" id="LRc-he-oxg"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZMU-v3-HlS" secondAttribute="trailing" id="bYU-uh-uUO"/>
+                                        <constraint firstItem="ZMU-v3-HlS" firstAttribute="top" secondItem="G8y-er-uec" secondAttribute="bottom" constant="24" id="kek-dW-thl"/>
                                         <constraint firstItem="G8y-er-uec" firstAttribute="centerX" secondItem="kyT-W9-Owh" secondAttribute="centerX" id="ogF-Vj-l5s"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="ZMU-v3-HlS" id="ZwC-8P-uTT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
