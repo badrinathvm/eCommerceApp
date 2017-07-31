@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.configureAppearence()
         FirebaseApp.configure()
-        
+    
         return true
     }
     
