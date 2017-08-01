@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.configureAppearence()
         FirebaseApp.configure()
-    
+        
+        DatabaseReferences.users(uid: "uid3abc").reference().setValue("Whiteboard")
+        
+        let adminValue = [
+            "username" : "admin1",
+            "uid" : "admin1"
+        ]
+        
+        DatabaseReferences.users(uid: "admin").reference().setValue(adminValue)
+        
+        //DatabaseReferences.admin(name: "username").reference().setValue("admin")
+        //DatabaseReferences.admin(name: "uid").reference().setValue("admin")
+        
+        let firImage = FirebaseImage(image: UIImage(named: "f1")!)
+        
+        firImage.saveProfileImage("shoe") { (error) in
+            if ((error) != nil){
+                print("Error Uploading Image \(error)")
+            }
+        }
+        
         return true
     }
     
