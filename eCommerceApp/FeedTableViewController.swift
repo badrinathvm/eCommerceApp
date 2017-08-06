@@ -20,8 +20,9 @@ class FeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "FEED"
+        //navigationItem.title = "FEED"
         
+        navigationController?.navigationBar.topItem?.title = ""
         fetchProducts()
         
         tableView.estimatedRowHeight = tableView.rowHeight

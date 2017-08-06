@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         firImage.saveProfileImage("shoe") { (error) in
             if ((error) != nil){
-                print("Error Uploading Image \(error)")
+                print("Error Uploading Image \(String(describing: error))")
             }
         }
         
